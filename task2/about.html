@@ -1,0 +1,76 @@
+<!-- link to github https://github.com/AlexandrKasyan/AlexandrKasyan_frontend -->
+<!DOCTYPE html>
+<!-- dictionary connection, RDFa -->
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:foaf="http://xmlns.com/foaf/0.1/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/" version="XHTML+RDFa 1.0" xml:lang="en">
+
+<head>
+	<meta charset="UTF-8"> <!-- encoding -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Space Engineers</title> <!-- Page title -->
+	<link rel="shortcut icon" href="img/logo.ico" /> <!--  Connect the logo to the page title -->
+	<link rel="stylesheet" type="text/css" href="css/main.css"> <!-- Connecting Cascading Style Sheets  -->
+</head>
+<!-- a dictionary that will be used by default in annotations, RDFa -->
+<!-- I also use the hCard microformat-->
+
+<body bgcolor="#c0c0c0" background="img/bg.jpg" bgproperties="fixed" vocab="http://schema.org/">
+	<header role="banner" itemscope itemtype="https://schema.org/Organization">
+		<div class="vcard">
+			<h1>Space Engineers</h1>
+			<img src="img/logo.ico" class="logo" itemprop="image" alt="logo">
+		</div>
+	</header>
+	<menu class="menu">
+		<!-- Menu List  -->
+		<article>
+			<nav>
+				<li><a rel="foaf:topic" class="main" href="index.html">Home</a></li> <!-- link to home page -->
+				<li><a rel="foaf:topic" class="schedule" href="table.html">Schedule</a></li> <!-- link to table -->
+				<li><a rel="foaf:topic" class="about" href="about.html">About</a></li>
+				<!-- link to information about the author -->
+			</nav>
+		</article>
+	</menu>
+	<main>
+		<article class="container">
+			<h1 property="name">Об авторе</h1>
+			<br><br><br>
+			<p><span class="fn n" property="name">Касьян Александр Сергеевич </span><span property="jobTitle">студент 3
+					курса</span> группа ИТП-31. <br> В данный момент проживаю по адресу пр.
+				Речицкий
+				135 блок 15-1-2.
+			</p>
+
+			<br><br>
+			<p>Связаться можно любым удобным способом из представленных ниже. </p>
+			<br><br>
+			<aside class="connection">
+				<p><a class="skype" property="skype" href="skype:gumoni.33"><img src="img/skype.png"
+							alt="skype">gumoni.33</a></p>
+				<p><a class="email" property="email" href="mailto:gumoni.33@mail.ru"><img src="img/mail.png"
+							alt="mail">gumoni.33@mail.ru</a></p>
+				<p><a class="vk" property="vk" href="https://vk.com/alexandr_k_c"><img src="img/vk.png"
+							alt="vk">alexandr_k_c</a></p>
+				<p><a class="tel" property="telephone" href="tel:+375295407807"><img src="img/phone.png"
+							alt="phone">+375295407807</a></p>
+			</aside>
+		</article>
+	</main>
+	<!--RDFa-->
+	<footer>
+		<section>
+			<p class="fn" property="dc:creator" resource="#kasyan.Alexandr" typeof="Person">
+				<!-- author-->
+				<span property="name"> Касьян А.С.</span>
+			</p>
+			<!-- Site version -->
+			<p class="note">Версия сайта 2.0</p>
+			<!-- Time of website creation-->
+			<div id="date_time_block" property="dc:modified" datatype="xsd:date" content="2022-03-03">19:48 03.03.2022
+			</div>
+		</section>
+	</footer>
+</body>
+
+</html>

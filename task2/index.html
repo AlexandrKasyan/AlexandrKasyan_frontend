@@ -12,25 +12,27 @@
 </head>
 
 <body bgcolor="#c0c0c0" background="img/bg.jpg" bgproperties="fixed" vocab="http://schema.org/">
-	<header>
+	<header role="banner" itemscope itemtype="https://schema.org/Organization">
 		<div class="vcard">
 			<h1>Space Engineers</h1>
-			<img src="img/logo.ico" class="photo" alt="logo">
+			<img src="img/logo.ico" class="logo" itemprop="image" alt="logo">
 		</div>
 	</header>
-	<menu>
+	<menu class="menu">
 		<!-- Menu List  -->
 		<article>
 			<nav>
-				<li><a href="index.html">Home</a></li> <!-- link to home page -->
-				<li><a href="table.html">Schedule</a></li> <!-- link to table -->
-				<li><a href="about.html">About</a></li><!-- link to information about the author -->
+				<li><a rel="foaf:topic" class="main" href="index.html">Home</a></li> <!-- link to home page -->
+				<li><a rel="foaf:topic" class="schedule" href="table.html">Schedule</a></li> <!-- link to table -->
+				<li><a rel="foaf:topic" class="about" href="about.html">About</a></li>
+				<!-- link to information about the author -->
 			</nav>
 		</article>
 	</menu>
 	<main>
-		<article class="vcard" typeof="Article" property="description">
-			<aside typeof="Article" class="descriptionGame">
+		 <!-- Text content -->
+		<article class="vcard" typeof="Article" property="description" itemscope itemtype="https://schema.org/">
+			<aside typeof="Article" class="descriptionGame" itemprop="description">
 				<b class="fn" property="name">Space Engineers</b> <!-- bold text   -->(русск. <b class="fn">Космические
 					инженеры</b>) — воксельная
 				игра-песочница
@@ -44,7 +46,7 @@
 				(англ.).
 			</aside>
 
-			<aside typeof="Article" class="descriptionGameProcess">
+			<aside typeof="Article" class="descriptionGameProcess" itemprop="description">
 				<h2>Игровой процесс</h2>
 				<hr>
 				Геймплей игры основан на строительстве космических кораблей, станций и исследовании планет и астероидов
@@ -64,7 +66,7 @@
 			</aside>
 
 
-			<aside typeof="Article" class="creativelMode">
+			<aside typeof="Article" class="creativelMode" itemprop="description">
 				<h2>Творческий режим</h2>
 				<hr>
 				В творческом режиме игроки обладают неограниченными ресурсами, могут мгновенно создавать инструменты и
@@ -74,7 +76,7 @@
 				Первоначально творческий режим был единственным режимом, доступным в игре.
 			</aside>
 
-			<aside typeof="Article" class="survivalMode">
+			<aside typeof="Article" class="survivalMode" itemprop="description">
 				<h2>Режим выживания</h2>
 				<hr>
 				В режиме выживания игрокам необходимо добывать, собирать и очищать различные ресурсы, чтобы создавать
@@ -96,16 +98,20 @@
 			</aside>
 		</article>
 	</main>
+	  <!--RDFa-->
 	<footer>
 		<section>
-			<p class="fn" property="author" resource="#kasyan.Alexandr" typeof="Person">
+			<p class="fn" property="dc:creator" resource="#kasyan.Alexandr" typeof="Person">
+				<!-- author-->
 				<span property="name"> Касьян А.С.</span>
 			</p>
-			<p>Версия сайта 1.0</p>
-			<div id="date_time_block">19:48 03.03.2022</div>
+			<!-- Site version -->
+			<p class="note">Версия сайта 2.0</p>
+			<!-- Time of website creation-->
+			<div id="date_time_block" property="dc:modified" datatype="xsd:date" content="2022-03-03">19:48 03.03.2022
+			</div>
 		</section>
 	</footer>
-	<script src="scripts/script.js"></script>
 </body>
 
 </html>

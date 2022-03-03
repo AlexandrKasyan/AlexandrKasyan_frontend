@@ -134,7 +134,7 @@ a
 	padding: 0 0 2.5vh 0;
 }
 
-footer 
+footer /*Positioning footer in a window*/
 {
 	padding: 1% 0 1% 0;
 	width: 100%;	
@@ -143,7 +143,7 @@ footer
 	border-top: 00.1vh solid white;
 
 }
-
+/*Positioning elements in footer*/
 footer p
 {
 	font-size: 2vh;
