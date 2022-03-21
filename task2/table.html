@@ -7,15 +7,17 @@
 	<meta charset="UTF-8"> <!-- encoding -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Space Engineers</title> <!-- Page title -->
-	<link rel="shortcut icon" href="img/logo.ico" /> <!--  Connect the logo to the page title -->
+	<link rel="shortcut icon" href="img/logo.png" /> <!--  Connect the logo to the page title -->
 	<link rel="stylesheet" type="text/css" href="css/main.css"> <!-- Connecting Cascading Style Sheets  -->
+	<link rel="stylesheet" href="css/table.css">
+	<link rel="stylesheet" type="text/css" href="css/adaptive.css">
+
 </head>
 
 <body bgcolor="#c0c0c0" background="img/bg.jpg" bgproperties="fixed" vocab="http://schema.org/">
 	<header role="banner" itemscope itemtype="https://schema.org/Organization">
 		<div class="vcard">
 			<h1>Space Engineers</h1>
-			<img src="img/logo.ico" class="logo" itemprop="image" alt="logo">
 		</div>
 	</header>
 	<menu class="menu">
@@ -35,7 +37,7 @@
 		<article class="container">
 			<!-- Form for table-->
 			<form class="tabs" typeof="Table">
-				<p><iframe name="output" scrolling="no" src="table_style1.html"></iframe></p>
+				<p><iframe name="output" scrolling="yes" src="table_style1.html"></iframe></p>
 				<!-- First table-->
 				<!-- Fields to switch-->
 				<p><input type="submit" value="1 стиль" formaction="table_style1.html" formtarget="output" name="tabs"><input

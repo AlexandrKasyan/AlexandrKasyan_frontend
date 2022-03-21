@@ -1,0 +1,12 @@
+table {
+    /* frame around the table */
+    font-size: 4.5vh;
+
+}
+
+td,
+th {
+    padding: 2vh;
+    /* margins around text */
+}
+
