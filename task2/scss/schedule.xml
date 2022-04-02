@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<schedule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <ship>
+        <name>Крейсер</name>
+        <departure>8:40</departure>
+        <arrival>10:50</arrival>
+    </ship>
+    <ship>
+        <name>Линейный крейсер</name>
+        <departure>7:10</departure>
+        <arrival>8:10</arrival>
+    </ship>
+    <ship>
+        <name>Дредноут</name>
+        <departure>12:20</departure>
+        <arrival>13:40</arrival>
+    </ship>
+    <ship>
+        <name>Крейсер не большой</name>
+        <departure>13:30</departure>
+        <arrival>15:30</arrival>
+    </ship>
+    <ship>
+        <name>Огромный линкор</name>
+        <departure>16:30</departure>
+        <arrival>17:40</arrival>
+    </ship>
+    <ship>
+        <name>Маленький Линкор</name>
+        <departure>11:30</departure>
+        <arrival>12:20</arrival>
+    </ship>
+</schedule>
