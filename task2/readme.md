@@ -1,1 +1,0 @@
-Use local server to work around CORS error
