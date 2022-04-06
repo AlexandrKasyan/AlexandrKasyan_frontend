@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Currency Converter</title>
+</head>
+
+<body onload="selectChanged('1')">
+    <div class="wrapper" id="wrapper">
+        <header id="header">Конвертер валют</header>
+        <main>
+            <!-- color styles -->
+            <button id="theme_black" class="theme converter__key" onclick="changeThemeBlack();">1</button>
+            <button id="theme_green" class="theme converter__key" onclick="changeThemeGreen();">2</button>
+            <button id="theme_gray" class="theme converter__key" onclick="changeThemeGray();">3</button>
+
+            <!-- currency converter window -->
+            <div id="converter">
+                <div class="converter_display"> 
+                    <p>
+                        <!-- selection of the input exchange rate -->
+                        <select id="cur1"></select> 
+                        <!-- period selection -->
+                        <select onchange="selectChanged(this.value);" id="date">
+                            <option value="1">2016</option>
+                            <option value="2">2022</option>
+                        </select>
+                        <!-- input data -->
+                        <input type="text" name="" placeholder="0" id="val">
+                    </p>
+                    <p>
+                        <!-- choosing the output currency -->
+                        <select id="cur2"></select>
+                        <!-- output data -->
+                    <input id="result" class="convert_result" type="text" name="" placeholder="0">
+
+                    </p>
+                </div>
+                <!-- virtual keyboard panel -->
+                <div id="button_panel">
+                    <!-- converter ROW -->
+                    <div class="converter_row">
+                        <button type="button" value="1" class="converter__key "
+                            onclick="enterValueFromButton(this.value)">1</button>
+                        <button type="button" value="2" class="converter__key "
+                            onclick="enterValueFromButton(this.value)">2</button>
+                        <button type="button" value="3" class="converter__key"
+                            onclick="enterValueFromButton(this.value)">3</button>
+                    </div>
+                    <!-- converter ROW -->
+                    <div class="converter_row">
+                        <button type="button" value="4" class="converter__key"
+                            onclick="enterValueFromButton(this.value)">4</button>
+                        <button type="button" value="5" class="converter__key"
+                            onclick="enterValueFromButton(this.value)">5</button>
+                        <button type="button" value="6" class="converter__key"
+                            onclick="enterValueFromButton(this.value)">6</button>
+                    </div>
+                    <!-- converter ROW -->
+                    <div class="converter_row">
+                        <button type="button" value="7" class="converter__key"
+                            onclick="enterValueFromButton(this.value)">7</button>
+                        <button type="button" value="8" class="converter__key"
+                            onclick="enterValueFromButton(this.value)">8</button>
+                        <button type="button" value="9" class="converter__key"
+                            onclick="enterValueFromButton(this.value)">9</button>
+                    </div>
+                    <!-- converter ROW -->
+                    <div class="converter_row">
+                        <button type="button" value="0" class="converter__key"
+                            onclick="enterValueFromButton(this.value)">0</button>
+                        <button type="button" value="." id="point" class="converter__key"
+                            onclick="enterValueFromButton(this.value)">.</button>
+                        <button type="button" value="c" id="clean" class="converter__key"
+                            onclick="enterValueFromButton(this.value)">c</button>
+                        <button type="button" value="del" id="del"class="converter__key"
+                            onclick="enterValueFromButton(this.value)">
+                            < </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer id="footer">Касьян Александр</footer>
+        <script src="scripts/script.js"></script>
+    </div>
+</body>
+
+</html>
