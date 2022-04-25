@@ -1,12 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="shortcut icon" href="img/logo.ico" /> 
+    <title>Best pizza</title>
     
+</head>
+
+<body onload="getProductsByJson();">
+    <header>
+        <h1>Best pizza</h1>
+    </header>
+    <main>
+        <div class="creator-pizza">
+            <p>Choose a dough</p>
+            <!-- pizza dough selection menu -->
+            <p><select onchange="setDough(this.value);" id="select-dough"></select></p>
+            <p id="choose-ingredients">
+                Choose a pizza filling
+                Ingredients
+                <p id="ingredient"></p>
+                Sauce
+                <p id="sauce"></p>
+                Seasonings
+                <p id="seasonings"></p>
+            </p>      
+            <input type="button" onclick="orderPizza();" value="Order pizza">
+        </div> 
+
+        <div class="view-pizza">
+            <div id="pizza-img"></div>
+            <div id="info-pizza"></div>
+        </div>
+        
+    </main>
+
+    <script src="./libs/pizza/components/pizza.js"></script>
+    <script src="./libs/pizza/components/dough.js"></script>
+    <script src="./libs/pizza/components/product.js"></script>
+    <script src="./libs/pizza/importProduct.js"></script>
+    <script src="./libs/pizza/setIngredient.js"></script>
+    <script src="./libs/pizza/addAndRemoveImg.js"></script>
+    <script src="./libs/pizza/selectionMenu.js"></script>
+    <script src="./libs/main.js"></script>
 </body>
+
 </html>
