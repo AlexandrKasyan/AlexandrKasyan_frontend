@@ -6,38 +6,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/style.css">
-    <link rel="shortcut icon" href="img/logo.ico" /> 
+    <link rel="shortcut icon" href="img/logo.ico" />
     <title>Best pizza</title>
-    
+
 </head>
 
 <body onload="getProductsByJson();">
-    <header>
-        <h1>Best pizza</h1>
-    </header>
-    <main>
-        <div class="creator-pizza">
-            <p>Choose a dough</p>
-            <!-- pizza dough selection menu -->
-            <p><select onchange="setDough(this.value);" id="select-dough"></select></p>
-            <p id="choose-ingredients">
-                Choose a pizza filling
-                Ingredients
+    <div id="wrap">
+        <header>
+            <h1>Best pizza</h1>
+        </header>
+        <main>
+            <div class="creator-pizza">
+                <p>Choose a dough</p>
+                <!-- pizza dough selection menu -->
+                <p><select onchange="setDough(this.value);" id="select-dough"></select></p>
+                <hr>
+                <p id="choose-ingredients">
+                    Choose a pizza filling
+                    Ingredients
                 <p id="ingredient"></p>
+                <hr>
                 Sauce
                 <p id="sauce"></p>
+                <hr>
                 Seasonings
                 <p id="seasonings"></p>
-            </p>      
-            <input type="button" onclick="orderPizza();" value="Order pizza">
-        </div> 
-
-        <div class="view-pizza">
-            <div id="pizza-img"></div>
-            <div id="info-pizza"></div>
-        </div>
-        
-    </main>
+                </p>
+                <input id="order-btn" type="button" onclick="orderPizza();" value="Order pizza">
+            </div>
+            <div class="view-pizza">
+                <div id="pizza-img"></div>
+                <div id="info-pizza"></div>
+            </div>
+        </main>
+    </div>
+    <footer>
+        <p>Aexandr Kasyan</p>
+    </footer>
 
     <script src="./libs/pizza/components/pizza.js"></script>
     <script src="./libs/pizza/components/dough.js"></script>

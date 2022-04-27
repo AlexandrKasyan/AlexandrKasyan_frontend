@@ -86,7 +86,7 @@
     toJSON(){
         return JSON.stringify({
             'dough' : this.#dough,
-            'ingredients' : this.#product,
+            'products' : this.#product,
         })
     }
 
