@@ -28,7 +28,7 @@ main{
     margin-top: 0em;
     background-color: rgb(159, 122, 233);
     width: 100%;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 #status{
@@ -36,7 +36,7 @@ main{
     overflow: scroll;
 }
 
-.area-container, .crud-area, .status-area{
+.area, .editing-area, .status-area{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -44,10 +44,19 @@ main{
 }
 .area{
     background-color: rgb(181, 171, 204);
-    width: 30%;
+    width: 50%;
     padding: 0.7em;
-    margin-left: 2em;
+    margin: 0 0em  1em 7em;
     border: solid 1px black;
+}
+
+.area-container{
+    padding-top: 3em;
+}
+
+body{
+    background-color: rgb(136, 88, 233);
+    
 }
 
 footer{
@@ -55,12 +64,12 @@ footer{
     color: white;
     text-align: center;
     padding: 0.7em;
-    height: 50px;
-    min-height: calc(110vh - 545px);
+    height: 30px;
+    min-height: calc(110vh - 680px);
 }
 
 
-#status, #crud{
+#status, #editing{
     background-color: rgb(181, 171, 204);
     padding: 0.7em;
     width: 80%;

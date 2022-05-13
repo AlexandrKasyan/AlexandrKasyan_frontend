@@ -22,7 +22,7 @@ update(3000, 'area[3].json', 'area3')
 document.forms["editForm"].addEventListener("submit", e => {
     e.preventDefault();
     addEventToJsonFile();
-    document.getElementById('status').appendChild(createLog("Успешно!", 'orange'))
+    document.getElementById('status').appendChild(createLog("Successfully!", 'orange'))
 })
 
 document.querySelector("select").addEventListener('change', async function (e) {
@@ -101,7 +101,7 @@ function addEventToJsonFile(){
         setTimeout(() => {
             setInterval(() => {
                 getFile(fileName, contentId)
-                document.getElementById('status').appendChild(createLog(`Данные из файла "${fileName}" успешно обновлены!`, 'yellow'))
+                document.getElementById('status').appendChild(createLog(`Data from the file "${fileName}" has been successfully updated!`, 'yellow'))
             }, interval)
         }, timeout)
     }

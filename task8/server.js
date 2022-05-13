@@ -32,7 +32,7 @@ app.post('/getData', jsonParser, (req, res) => {
             events = JSON.parse(data)
         }
         res.send(JSON.stringify({
-            'msg' : `Событие из файла ${req.body.fileName} успешно прочитано`,
+            'msg' : `Event from the file ${req.body.fileName} read successfully`,
             'events' : events
         }))
     })
@@ -60,9 +60,9 @@ app.post('/files', jsonParser, (req, res) => {
     fs.readFile(req.body.fileName, 'utf-8', (err, data) => {
         if (err) console.log(`Error: ${err}`)
         res.send(JSON.stringify({
-            'msg' : `Событие успешно отредактировано в файл "${req.body.fileName}"!`,
+            'msg' : `The event was successfully edited to the file "${req.body.fileName}"!`,
             'events': data
         }))
     })
 })
-app.listen(3000, () => console.log("Сервер запущен..."))
+app.listen(3000, () => console.log("The server is running..."))
