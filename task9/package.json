@@ -1,0 +1,22 @@
+{
+  "name": "task9",
+  "version": "1.0.0",
+  "description": "Node JS server",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexandrKasyan/AlexandrKasyan_frontend.git"
+  },
+  "author": "Alexandr Kasyan(alexandr.kasyan@mail.ru)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlexandrKasyan/AlexandrKasyan_frontend/issues"
+  },
+  "homepage": "https://github.com/AlexandrKasyan/AlexandrKasyan_frontend#readme",
+  "dependencies": {
+    "http": "^0.0.1-security"
+  }
+}
