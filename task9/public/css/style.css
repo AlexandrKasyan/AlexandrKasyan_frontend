@@ -60,3 +60,15 @@ button{
 #paginationButton{
 	text-align: center;
 }
+
+footer{
+    position: absolute;
+    top:700px;
+    text-align: center;
+    width: 100%;
+	font-size: 1.2em;
+    background-color: rgb(27, 27, 92);
+	color: #d8d8d8;
+    padding: 5px 10px 5px 10px;
+    border-radius: 2px;
+}
