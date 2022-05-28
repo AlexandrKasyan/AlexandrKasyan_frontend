@@ -26,13 +26,21 @@ app.get('/', (req, res) => {
 app.post('/getInfo', jsonParser, (req, res) => {
     if (!req.body) res.sendStatus(400)
     fs.readFile('listStudent.json', 'utf8', (err, data) => {
-        if (err) console.log(err)
-        
+        if (err) console.log(err);
+        let array = JSON.parse(data);     
+        let arrayStudent = [];
+
+        for(let i = req.body.idStart; i < req.body.count+req.body.idStart; i++)
+        {
+            arrayStudent.push(array[i]);
+        }
+
         res.send(JSON.stringify({
-            'students' : data
-        }))
+            'students' : arrayStudent
+        }));
     })
 });
+
 
 app.post('/delete', jsonParser, (req, res) => {
     if (!req.body) res.sendStatus(400)
@@ -41,13 +49,33 @@ app.post('/delete', jsonParser, (req, res) => {
         if (err) console.log(err)
         let array = JSON.parse(data)
 
-        delete array[req.body.id];
-        console.log(array)
-         fs.writeFile('listStudent.json', JSON.stringify(array), (err) => {
-             if (err) console.log(err)
-         })
+        array.forEach(function(el, i) {
+            if (el.id == req.body.id) array.splice(i, 1)
+          })
+          fs.writeFile('listStudent.json', JSON.stringify(array), (err) => {
+              if (err) console.log(err)
+          })
        
          res.send()
+    })
+});
+
+app.post('/getCount', jsonParser, (req, res) => {
+    if (!req.body) res.sendStatus(400)
+    fs.readFile('listStudent.json', 'utf8', (err, data) => {
+        if (err) console.log(err)
+        let array = JSON.parse(data)        
+        let count = 0;
+        
+        for(let i = 0; i <= array.length; i++)
+        {
+            if(array[i]!=null )
+                count+=1;
+        }
+
+        res.send(JSON.stringify({
+            'count' : count
+        }));
     })
 });
 

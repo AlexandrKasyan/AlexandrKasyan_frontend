@@ -11,6 +11,7 @@ header{
     text-align: center  ;
 }
 
+
 .table {
 	width: 100%;
 	border: none;
@@ -45,4 +46,17 @@ header{
 }
 .table tbody tr td:last-child {
 	border-radius: 0 8px 8px 0;
+}
+
+#inputStudentData{
+	padding: 1em;
+}
+
+button{
+	padding: 0.5em;
+	margin-left: 0.4em;
+}
+
+#paginationButton{
+	text-align: center;
 }

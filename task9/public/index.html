@@ -9,25 +9,12 @@
     <title>Student</title>
 </head>
 
-<body onload='getFile()'>
+<body onload='getFile(0, 4)'>
     <header>
         <h1>List student</h1>
     </header>
     <main>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Id</th>
-                    <th>First Name</th>
-                    <th>Second Name</th>
-                    <th>Age</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody id="row">
-            </tbody>
-        </table>
-        <article> 
+        <article id = "inputStudentData"> 
             <label for="id">id </label>
             <input id="id" name="id" type="text" disabled>
             <label for="firstName">firstName </label>
@@ -39,6 +26,22 @@
             <button onclick="addStudent()">add</button>
             <button onclick="edit()">edit</button>
         </article>
+        <article id = "studentListTable">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>First Name</th>
+                        <th>Second Name</th>
+                        <th>Age</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="row">
+                </tbody>
+            </table>
+        </article>
+        <p id = paginationButton></p>
     </main>
 
 </body>
