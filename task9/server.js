@@ -2,7 +2,6 @@
 
 const express = require('express');
 const fs = require('fs');
-const path = require('path');
 const jsonParser = express.json()
 const cors = require("cors");
 const PORT = 3000;
@@ -15,8 +14,6 @@ const corsOptions ={
 }
 
 app.use(cors(corsOptions))
-
-
 
 app.use('/', express.static(__dirname + '/public'))
 app.get('/', (req, res) => {
@@ -40,7 +37,6 @@ app.post('/getInfo', jsonParser, (req, res) => {
         }));
     })
 });
-
 
 app.post('/delete', jsonParser, (req, res) => {
     if (!req.body) res.sendStatus(400)
@@ -66,7 +62,7 @@ app.post('/getCount', jsonParser, (req, res) => {
         if (err) console.log(err)
         let array = JSON.parse(data)        
         let count = 0;
-        
+
         for(let i = 0; i <= array.length; i++)
         {
             if(array[i]!=null )
@@ -118,7 +114,6 @@ app.post('/edit', jsonParser, (req, res) => {
     })
 
 });
-
 
 app.listen(PORT, 'localhost', (error)=> {
     error ? console.log(error) : console.log(`listening port ${PORT}`)
